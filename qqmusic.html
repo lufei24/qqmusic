@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/qqmusic.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous"></script>
+    <script src="js/MusicControl.js" defer></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/qqmusic.js" defer></script>
+
+    <title>QQ音乐</title>
+</head>
+
+<body>
+
+    <h1 class="player_logo">
+        <a href="https://y.qq.com/">
+            <img src="images/player_logo.png" class="player_logo__pic" title="QQ音乐">
+        </a>
+    </h1>
+    <!-- 用户信息 -->
+    <div class="player_login">
+        <div class="user"></div>
+        <a href="javascript:;" class="login">
+            <span>登陆</span>
+        </a>
+        <a href="javascript:;" class="set_up">
+            <span>设置</span>
+        </a>
+    </div>
+    <!-- 用户登陆框 -->
+    <div class="login_warp">
+        <div class="login">
+            <div class="top">
+                <a href="javascript:;" class="green qq">QQ登陆</a>
+                <a href="javascript:;" class="wx">微信登陆</a>
+            </div>
+            <a class="close" href="javascript:;">
+                <i></i>
+            </a>
+            <div class="qq_login">
+                <div class="login_text">
+                    <p class="text_1">快速安全登录</p>
+                    <p class="text_2">请使用<a href="http://im.qq.com/mobileqq/#from=login">QQ手机版</a>扫描二维码，<br>
+                        安全登录，防止盗号。</p>
+                </div>
+                <div class="pic_erweima_warp">
+                    <span>
+                        <img src="images/erweima.png" alt="">
+                    </span>
+                </div>
+                <div class="bottom_text">
+                    <div class="left_check">
+                        <input type="checkbox" name="" id="auto_login">
+                        <label for="auto_login">下次自动登陆</label>
+                    </div>
+                    <a href="">账号密码登陆</a>
+                    <span>|</span>
+                    <a href="">注册新账号</a>
+                    <span>|</span>
+                    <a href="">意见反馈</a>
+                </div>
+            </div>
+            <div class="wx_login">
+                <img src="images/wx_erweima.PNG" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 用户设置框 -->
+
+    <!-- 主体框架mod_player -->
+    <div class="mod_palyer">
+        <div class="palyer_hd"></div>
+        <div class="palyer_bd">
+            <div class="music_warp">
+                <div class="oper_list">
+                    <a href="">
+                        <i class="m_like"></i>收藏</a>
+                    <a href="">
+                        <i class="m_add"></i>添加到</a>
+                    <a href="">
+                        <i class="m_download"></i>下载</a>
+                    <a href="">
+                        <i class="m_remove"></i>删除</a>
+                    <a href="">
+                        <i class="m_clear"></i>清空列表</a>
+                </div>
+                <div class="music_list">
+                    <i class="music_list_line"></i>
+                    <ul class="music_list_header">
+                        <li class="edit">
+                            <input type="checkbox" name="" id="" class="m_list_ckbox">
+                        </li>
+                        <li class="song_name">歌曲</li>
+                        <li class="singer">歌手</li>
+                        <li class="song_time">时长</li>
+                    </ul>
+                    <i class="music_list_line"></i>
+                    <ul class="song_list">
+                        <!-- <li>
+                            <div class="song_item">
+                                <div class="edit">
+                                </div>
+                                <div class="song_list_number">1</div>
+                                <div class="song_list_songname">
+                                    <span class="song_name">黑色幽默</span>
+                                    <div class="mod_list_menu">
+                                        <a href="javascript:;">
+                                            <i title="播放" class="m_playing"></i>
+                                        </a>
+                                        <a href="javascript:;">
+                                            <i title="添加到" class="m_addTo"></i>
+                                        </a>
+                                        <a href="javascript:;" class="logining_down">
+                                            <i title="下载" class="m_load"></i>
+                                        </a>
+                                        <a href="javascript:;">
+                                            <i title="分享" class="m_share"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="song_list_singer">
+                                    <a href="" title="周杰伦" class="singer">周杰伦</a>
+                                </div>
+                                <div class="song_list_time">04:43</div>
+                                <div class="song_list_other"></div>
+                                <a href="javascript:;" class="song_list_delete" title="删除">
+                                </a>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="view_lyric">
+                    <div class="song_info">
+                        <a href="javascript:;" class="m_pic">
+                            <img src="" alt="">
+                        </a>
+                        <div class="m_name">
+                            歌曲名:
+                            <a href="" title="黑色幽默">黑色幽默</a>
+                        </div>
+                        <div class="m_singer">
+                            歌手名:
+                            <a href="" title="周杰伦">周杰伦</a>
+                        </div>
+                        <div class="m_album">
+                            专辑名:
+                            <a href="" title="Jay">Jay</a>
+                        </div>
+                    </div>
+                    <div class="song_lyric">
+                        <ul>
+                            <li>难过，是因为闷了很久</li>
+                            <li>是因为想的太多</li>
+                            <li>是心里起了作用</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="palyer_ft">
+            <a href="javascript:;" class="play_prev"></a>
+            <a href="javascript:;" class="playing"></a>
+            <a href="javascript:;" class="play_next"></a>
+            <div class="play_music">
+                <div class="play_music_info">
+                    <a href="javascript:;"></a><a href="javascript:;"></a>
+                </div>
+                <div class="play_music_time"></div>
+                <div class="play_music_scroll">
+                    <div class="scroll_warp">
+                        <div class="song_over">
+                        <div class="song_ing">
+                            <i class="song_dot"></i>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="javascript:;" class="play_change"></a>
+            </div>
+            <a href="javascript:;" class="song_like"></a>
+            <a href="javascript:;" class="song_download"></a>
+            <a href="" class="song_comment">
+                <span class="comment_count"><i class="com_number no1"></i><i class="com_number no1"></i><i class="com_number no1"></i><i
+                        class="com_number noAdd"></i></span>
+            </a>
+            <a href="javascript:;" class="open_quiet"></a>
+            <div class="volume">
+                <a href="javascript:;" class="stop_volume"></a>
+                <div class="change_volume">
+                    <div class="now_volume">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bg_pic"></div>
+    <div class="bg_filter">
+
+    </div>
+    <audio src="" class="audio">您的浏览器不支持 audio 标签。</audio>
+</body>
+
+</html>

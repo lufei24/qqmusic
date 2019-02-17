@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Beautiful Now",
+		"singer": "Zedd / Jon Bellion",
+		"album": "True Colors",
+		"time": "03:38",
+		"link_url": "./source/Beautiful Now.mp3",
+		"cover": "./source/Beautiful Now.jpg",
+		"link_lrc": "./source/Beautiful Now.txt"
+	},
+	{
+		"name": "江南夜色",
+		"singer": "枫叶 / 承利 / DJ梦菲",
+		"album": "中文咚鼓精选辑",
+		"time": "03:15",
+		"link_url": "./source/江南夜色 (咚鼓版) - 枫叶,承利,DJ梦菲.mp3",
+		"cover": "./source/江南夜色 (咚鼓版) - 枫叶,承利,DJ梦菲.jpg",
+		"link_lrc": "./source/江南夜色 (咚鼓版) - 枫叶,承利,DJ梦菲.txt"
+	},
+	{
+		"name": "上天安排的最大嘛 (DJ版) - 承利",
+		"singer": "承利",
+		"album": "上天安排的最大嘛 (DJ版) - 承利",
+		"time": "02:41",
+		"link_url": "./source/上天安排的最大嘛 (DJ版) - 承利.mp3",
+		"cover": "./source/上天安排的最大嘛 (DJ版) - 承利.jpg",
+		"link_lrc": "./source/上天安排的最大嘛 (DJ版) - 承利.txt"
+	},
+	{
+		"name": "真的爱你 (童音版)",
+		"singer": "MC小阿硕 / 王佳豪",
+		"album": "社会语录",
+		"time": "03:55",
+		"link_url": "./source/真的爱你 (童音版) - MC小阿硕,王佳豪.mp3",
+		"cover": "./source/真的爱你 (童音版) - MC小阿硕,王佳豪.jpg",
+		"link_lrc": "./source/真的爱你 (童音版) - MC小阿硕,王佳豪.txt"
+	}
+]

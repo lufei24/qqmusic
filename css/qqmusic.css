@@ -1,0 +1,817 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+    position: relative;
+    background-color: rgba(41, 42, 43, 0.8);
+    line-height: 1.5;
+    color: rgba(225,225,225,.8);
+}
+
+a{
+    text-decoration: none;
+    color: rgba(225,225,225,.8);
+}
+ul,ol{
+    list-style: none;
+}
+/* logo */
+.player_logo{
+    width: 78px;
+    height: 27px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.player_logo .player_logo__pic{
+    width: 78px;
+    height: 21px;
+    opacity: 0.3;
+    vertical-align: top;
+}
+.player_logo .player_logo__pic:hover{
+    opacity: 1;
+}
+
+/* 用户信息 */
+.player_login{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding-right: 28px;
+}
+.player_login>a{
+    float: left;
+    text-decoration: none;
+}
+.player_login>a>span{
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.3;
+    margin-right: 15px;
+}
+.player_login>a>span:hover{
+    opacity: 1;
+}
+
+/* 用户登陆框 */
+.login_warp{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+}
+.login_warp .login{
+    width: 560px;
+    height: 410px;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -195px;
+    margin-left: -270px;
+}
+.login_warp .login .top{
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #f2f2f2;
+    text-align: center;
+}
+.login_warp .login .top>a{
+    margin: 0 55px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 55px;
+}
+.login_warp .login .top>a:hover{
+    color: #31c27c;
+}
+.login_warp .login .top .green{
+    color: #31c27c;
+}
+
+.login_warp .login .close{
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+.login_warp .login .close>i{
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 6px;
+    background: url(../images/icon_popup.png) 0 -200px;
+}
+.login_warp .login .close>i:hover{
+    background-position: -14px -200px;
+}
+.login_warp .login_text{
+    width: 100%;
+    height: 120px;
+    margin-top: 18px; 
+}
+.login_warp .login_text .text_1{
+    height: 26px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333;
+    margin-bottom: 16px;
+}
+.login_warp .login_text .text_2{
+    height: 42px;
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+.login_warp .login_text .text_2>a{
+    color: #3481cf;
+    text-decoration: none;
+}
+.login_warp .pic_erweima_warp{
+    text-align: center;
+    height: 190px;
+}
+.login_warp .pic_erweima_warp span>img{
+    width: 130px;
+    height: 130px;
+    margin: 1px;
+    border: 1px solid #D3D3D3; 
+}
+.login_warp .bottom_text{
+    position: relative;
+    width: 100%;
+    height: 16px;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 12px;
+    text-align: right;
+}
+.login_warp .bottom_text .left_check{
+    height: 18px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+.login_warp .bottom_text .left_check input{
+    width: 18px;
+    height: 18px;
+    border: none;
+    margin-right: 2px;
+}
+.login_warp .bottom_text .left_check label{
+    vertical-align: top;
+    line-height: 16px;
+}
+.login_warp .bottom_text a{
+    color: #666;
+}
+.login_warp .bottom_text a:hover{
+    text-decoration: underline;
+}
+.login_warp .bottom_text span{
+    color: #bfbfbf;
+    margin: 0 5px;
+}
+.login_warp .bottom_text :last-child{
+    margin-right: 10px;
+}
+.login_warp .wx_login{
+    width: 560px;
+    height: 354px;
+    display: none;
+}
+.login_warp .wx_login img{
+    width: 560px;
+    height: 354px;
+}
+
+/* 主体框架mod_player */
+.mod_palyer{
+    width: 1618px;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+}
+/* 顶部内容，暂时没有 */
+
+/* 中部音乐列表，封面歌词等 */
+.palyer_bd{
+    position: absolute;
+    top: 11%;
+    bottom: 18%;
+    width: 100%;
+    /* border: 1px solid white; */
+}
+.palyer_bd .music_warp{
+    width: 100%;
+    position: relative;
+}
+/* 顶部音乐收藏等功能 */
+.palyer_bd .music_warp .oper_list{
+    width: 1177px;
+    height: 38px;
+    margin: 0 0 20px 1px;
+    position: relative;
+}
+.palyer_bd .music_warp .oper_list>a{
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,.2);
+    text-align: center;
+    color: #fff;
+    min-width: 122px;
+    opacity: 0.6;
+}
+.palyer_bd .music_warp .oper_list>a:hover{
+    opacity: 1;
+    border: 1px solid #fff;
+}
+.palyer_bd .music_warp .oper_list>a>i{
+    vertical-align: -3px;
+    display: inline-block; 
+    width: 16px;
+     height: 16px; 
+    margin-right: 4px;
+    background: url(../images/icon_sprite.png) no-repeat;
+}
+.palyer_bd .music_warp .oper_list a .m_like{
+    background-position: -60px -20px;
+}
+.palyer_bd .music_warp .oper_list a .m_add{
+    background-position: -20px -20px;
+}
+.palyer_bd .music_warp .oper_list a .m_download{
+    background-position: -40px -240px;
+}
+.palyer_bd .music_warp .oper_list a .m_remove{
+    background-position: -100px -20px;
+}
+.palyer_bd .music_warp .oper_list a .m_clear{
+    background-position: -40px -300px;
+}
+
+/* 音乐列表 */
+.palyer_bd .music_warp .music_list{
+    width: 1178px;
+    height: 625px;
+    overflow-y: auto;
+    color: rgba(225,225,225,.8);
+}
+/* 滚动条样式 */
+.palyer_bd .music_warp .music_list::-webkit-scrollbar{
+    width: 8px;
+    background: transparent;
+}
+.palyer_bd .music_warp .music_list::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.palyer_bd .music_warp .music_list::-webkit-scrollbar-track{
+    background: transparent;
+}
+.palyer_bd .music_warp .music_list .music_list_line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    opacity: .02;
+}
+.palyer_bd .music_warp .music_list .music_list_header{
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 0 100px 0 62px;
+    position: relative;
+}
+.edit{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border: 1px solid rgba(225,225,225,.2);
+}
+.edit:hover{
+    border-color: #fff;
+}
+.edit_checked {
+    background: url(../images/icon_sprite.png) no-repeat -60px -80px;
+    border-color: #fff;
+}
+.edit .m_list_ckbox{
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+.music_list_header .song_name{
+    float: left;
+    width: 68%;
+    position: relative;
+    white-space: normal;
+    cursor: default;
+}
+
+.music_list_header .singer{
+    float: left;
+    padding-left: 20px;
+    width: 26%;
+    box-sizing: border-box;
+}
+.music_list_header .song_time{
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px;
+}
+/* 歌曲 */
+.song_list{
+    overflow: hidden;
+    clear: both;
+}
+.song_list .song_item{
+    position: relative;
+    padding-left: 62px;
+    padding-right: 100px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid rgba(225,225,225,.04);
+    box-sizing: border-box;
+    user-select: none;
+}
+.song_list .song_item a{
+    color: rgba(225,225,225,.8);
+}
+.song_list .song_item .song_list_number{
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 36px;
+    text-align: right;
+}
+.song_list .song_item .song_list_number2{
+    background: url(../images/wave.gif) no-repeat right center;
+    color: transparent;
+}
+.song_item .song_list_songname{
+    float: left;
+    width: 68%;
+    position: relative;
+    white-space: normal;
+}
+.song_list_songname .song_name{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    white-space: nowrap;
+    cursor: default;
+}
+.song_list_songname .song_name2{
+    color: #fff;
+}
+.song_list_songname .mod_list_menu{
+    float: right;
+    margin-right: 8px;
+    display: none;
+}
+.song_list_songname .mod_list_menu>a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.song_list_songname .mod_list_menu a>i{
+    background: url(../images/icon_list_menu.png) no-repeat;
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.song_list_songname .mod_list_menu .logining_down{
+    display: none;
+}
+.song_list_songname .mod_list_menu a .m_playing{
+    background-position: -80px 0;
+}
+.song_list_songname .mod_list_menu a .m_playing:hover{
+    background-position:  -120px 0; 
+}
+.song_list_songname .mod_list_menu a .m_playing2{
+    background-position: -80px -200px;  
+}
+.song_list_songname .mod_list_menu a .m_playing2:hover{
+    background-position: -120px -200px; 
+}
+.song_list_songname .mod_list_menu a .m_addTo{
+    background-position: -80px -80px;
+}
+.song_list_songname .mod_list_menu a .m_addTo:hover{
+    background-position: -120px -80px;
+}
+.song_list_songname .mod_list_menu a .m_load{
+    background-position: -80px -120px
+}
+.song_list_songname .mod_list_menu a .m_load:hover{
+    background-position: -120px -120px
+}
+.song_list_songname .mod_list_menu a .m_share{
+    background-position: -80px -40px;
+}
+.song_list_songname .mod_list_menu a .m_share:hover{
+    background-position: -120px -40px;
+}
+.song_item .song_list_singer{
+    float: left;
+    padding-left: 20px;
+    width: 26%;
+    box-sizing: border-box;
+}
+.song_item .song_list_singer .singer:hover{
+    color: #fff;
+}
+.song_item .song_list_singer .singer2{
+    color: #fff;
+}
+.song_item .song_list_time{
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 38px;
+    cursor: default;
+}
+.song_item .song_list_other{
+    position: absolute;
+    width: 38px;
+    height: 50px;
+    right: 0;
+}
+.song_item .song_list_delete{
+    position: absolute;
+    top: 50%;
+    right: -99px;
+    margin-top: -18px;
+    width: 36px;
+    height: 36px;
+    background: url(../images/icon_list_menu.png) -80px -160px;
+}
+.song_item .song_list_delete:hover{
+    background-position: -120px -160px;
+}
+
+
+/* 封面与歌词区域 */
+.palyer_bd .music_warp .view_lyric{
+    width: 340px;
+    height: 680px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    user-select: none;
+}
+.view_lyric .song_info{
+    
+}
+.view_lyric .song_info .m_pic{
+    display: inline-block;
+    position: relative;
+    display: block;
+    width: 186px;
+    height: 186px;
+    margin: auto;
+}
+.view_lyric .song_info .m_pic img{
+    width: 186px;
+    height: 186px;
+    vertical-align: middle;
+}
+.view_lyric .song_info .m_pic::after{
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 201px;
+    height: 180px;
+    background: url(../images/album_cover_player.png) 0 0 no-repeat;
+}
+.view_lyric .song_info>div{
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+    text-align: center;
+}
+.view_lyric .song_info .m_name{
+    margin-top: 15px;
+}
+.view_lyric .song_info>div>a:hover{
+    color: #fff;
+}
+/* 歌词 */
+.view_lyric .song_lyric{
+    position: absolute;
+    top: 320px;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 24px;
+}
+.view_lyric .song_lyric ul{
+    width: 100%;
+    margin-top: 34px;
+}
+.view_lyric .song_lyric ul li{
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+
+}
+.view_lyric .song_lyric ul li:first-of-type{
+    color: #31c27c;
+}
+/* 底部播放器控制按钮 */
+.palyer_ft{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 11%;
+}
+.palyer_ft>a{
+    background: url(../images/player.png) no-repeat;
+    opacity: 0.8;
+    display: inline-block;
+    position: absolute;
+}
+.palyer_ft a:hover{
+    opacity: 1;
+}
+.palyer_ft .play_prev{
+    width: 19px;
+    height: 21px;
+    top: 4px;
+    left: 0;
+    background-position: 0 -30px;
+}
+.palyer_ft .playing{
+    top: 0;
+    left: 65px;
+    width: 21px;
+    height: 29px;
+    background-position: 0 0;
+}
+.palyer_ft .playing2{
+    background-position: -30px 0;
+}
+.palyer_ft .play_next{
+    top: 4px;
+    left: 132px;
+    width: 19px;
+    height: 20px;
+    background-position: 0 -52px;
+}
+/* 进度条 */
+.palyer_ft .play_music{
+    position: relative;
+    margin: 0 448px 0 208px;
+}
+.play_music .play_music_info{
+    padding-right: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+.play_music .play_music_info>a:hover{
+    color: #fff;
+}
+.play_music .play_music_time{
+    position: absolute;
+    top: 0;
+    right: 0;
+    user-select: none;
+}
+.play_music .play_music_scroll{
+    padding-top: 6px;
+    height: 8px;
+    
+}
+.play_music .play_music_scroll .scroll_warp{
+    position: relative;
+    height: 2px;
+    background: rgba(255,255,255,.1);
+}
+.play_music .play_music_scroll .scroll_warp .song_over{
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,.2);
+    cursor: pointer;
+}
+.play_music .play_music_scroll .scroll_warp .song_ing{
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: rgba(255,255,255,.7);
+    cursor: pointer;
+}
+.play_music .play_music_scroll .scroll_warp .song_ing i{
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url(../images/player.png) 0 -170px;
+    top: -4px;
+    right: -4px;
+    opacity: 1;
+    filter: none;
+    cursor: pointer;
+}
+.palyer_ft .play_change{
+    position: absolute;
+    display: block;
+    top: 4px;
+    right: 378px;
+    width: 26px;
+    height: 25px;
+    background:  url(../images/player.png) 0 -205px;
+    opacity: 0.8;
+}
+.palyer_ft .play_change2{
+    width: 23px;
+    height: 20px;
+    background-position: 0 -260px;
+}
+.palyer_ft .play_change3{
+    width: 25px;
+    height: 19px;
+    background-position: 0 -74px;
+}
+.palyer_ft .play_change4{
+    width: 26px;
+    height: 25px;
+    background-position: 0 -232px;
+}
+.palyer_ft .play_change:hover{
+    opacity: 1;
+}
+.palyer_ft .song_like{
+    top: 4px;
+    right: 330px;
+    width: 23px;
+    height: 21px;
+    background-position: 0 -96px;
+}
+.palyer_ft .song_download{
+    top: 4px;
+    right: 286px;
+    width: 22px;
+    height: 21px;
+    background-position: 0 -120px;
+}
+.palyer_ft .song_comment{
+    top: 3px;
+    right: 237px;
+    width: 24px;
+    height: 24px;
+    background-position: 0 -430px;
+}
+.palyer_ft .song_comment .comment_count{
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    white-space: nowrap;
+    text-align: right;
+    height: 8px;
+    line-height: 8px;
+}
+.palyer_ft .song_comment .comment_count .com_number{
+    background: url(../images/comment.png);
+    display: inline-block;
+    width: 6px;
+    height: 8px;
+}
+.palyer_ft .song_comment .comment_count .no1{
+    background-position: -40px -210px;
+}
+.palyer_ft .song_comment .comment_count .noAdd{
+    background-position: -25px -125px;
+    margin-left: 1px;
+    vertical-align: -1px;
+}
+.palyer_ft .open_quiet{
+    top: 3px;
+    right: 137px;
+    width: 74px;
+    height: 26px;
+    background-position: 0 -282px;
+}
+.palyer_ft .open_quiet2{
+    background-position: 0 -311px;
+}
+.palyer_ft .volume{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    padding-top: 13px;
+    height: 8px;
+    cursor: pointer;
+}
+.palyer_ft .volume .stop_volume{
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: -31px;
+    width: 26px;
+    height: 21px;
+    background: url(../images/player.png) 0 -144px;
+}
+.palyer_ft .volume .stop_volume2{
+    background-position: 0 -182px;
+}
+.palyer_ft .volume .change_volume{
+    position: relative;
+    height: 2px;
+    background: rgba(255,255,255,.1);
+}
+.palyer_ft .volume .change_volume .now_volume{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 75%;
+    background: rgba(255,255,255,.7);
+}
+.palyer_ft .volume .change_volume .now_volume>i{
+    position: absolute;
+    display: block;
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background: url(../images/player.png) 0 -170px;
+    opacity: 1;
+    filter: none;
+}
+
+/* 背景图片模糊效果 */
+.bg_pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+}
+.bg_filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35)
+}
